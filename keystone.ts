@@ -1,5 +1,5 @@
 import { config } from '@keystone-6/core';
-import { fixPrismaPath } from './../example-utils';
+import { fixPrismaPath } from './example-utils';
 import { lists } from './src/keystone/schema';
 import { withAuth, session } from './src/keystone/auth';
 import { seedDemoData } from './src/keystone/seed';
@@ -10,8 +10,8 @@ const dbFilePath = `${process.cwd()}/keystone.db`;
 export default withAuth(
   config({
     db: {
-      provider: 'sqlite',
-      url: `file:${dbFilePath}`,
+      provider: 'postgresql',
+      url: `postgres://postgres:Vaibhu@9960@127.0.0.1:5432`,
       onConnect: async (context: Context) => {
         await seedDemoData(context);
       },
