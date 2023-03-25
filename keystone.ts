@@ -13,7 +13,7 @@ export default withAuth(
       provider: 'postgresql',
       url: `postgres://postgres:Vaibhu@9960@127.0.0.1:5432`,
       onConnect: async (context: Context) => {
-        await seedDemoData(context);
+        // await seedDemoData(context);
       },
 
       // WARNING: this is only needed for our monorepo examples, dont do this
